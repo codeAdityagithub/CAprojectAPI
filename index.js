@@ -12,7 +12,6 @@ app.get("/resume/:id", (req, res) => {
     try{
         const id = req.params.id;
         const result = data.find(cur=>cur.id===Number(id))
-
         if(!result) return res.status(404).send("not data found")
 
         const recommended = []
